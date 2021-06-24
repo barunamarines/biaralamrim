@@ -60,7 +60,8 @@ class Donasi extends CI_Controller {
         $b['data_donasi'] = $this->Biara_m->get_donasi($id_donasi);
         $this->load->view('Admin/DonasiV/edit_donasi', $b);
     }
-
+    
+//  GRAD yg ini maksudnya supaya input tanpa gambar(gambar = null), inputtan lainnya masih bisa di post
     public function inputDonasi_edit()
     {
         $judul_donasi = $this->input->post('judul_donasi');
